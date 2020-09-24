@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+        <title>Traffic Generator</title>	
+        {% include "trafficapp/head.html" %}
+    </head>
+    <body class="one-page" data-target="#header" data-spy="scroll" data-offset="100">
+        <div class="body">
+            {% include "trafficapp/header.html" %}
+            
+            <div role="main" class="main">
+                <section class="page-header page-header-classic">
+                    <br><br>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <ul class="breadcrumb">
+                                    <li><a href="{% url 'index' %}">Home</a></li>
+                                    <li class="active">Pages</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col p-static">
+                                <h1 data-title-border>Register</h1>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="container">
+
+					<div class="row">
+						<div class="col">
+
+							<div class="featured-boxes">
+								<div class="row">
+                                    <div class="col-md-3"></div>
+									<div class="col-md-6">
+										<div class="featured-box featured-box-primary text-left mt-5">
+											<div class="box-content">
+												<h4 class="color-primary font-weight-semibold text-4 text-uppercase mb-3">Sign Me Up</h4>
+												<form action="{% url 'trafficapp:register' %}" id="frmSignIn" method="post" class="needs-validation">
+                                                    {% csrf_token %}
+                                                    <div class="form-row">
+														<div class="form-group col">
+															<label class="font-weight-bold text-dark text-2">Username</label>
+															<input id="name" type="text" class="form-control form-control-lg" name="username" required autocomplete="username" autofocus>
+														</div>
+                                                    </div>
+                                                    <div class="form-row">
+														<div class="form-group col">
+															<label class="font-weight-bold text-dark text-2">E-mail Address</label>
+															<input type="email" class="form-control fomr-control-lg" name="email" required autocomplete="email" autofocus>
+														</div>
+													</div>
+                                                    <div class="form-row">
+														<div class="form-group col">
+															<label class="font-weight-bold text-dark text-2">First Name</label>
+															<input id="name" type="text" class="form-control form-control-lg" name="first_name" required autocomplete="first_name" autofocus>
+														</div>
+                                                    </div>
+                                                    <div class="form-row">
+														<div class="form-group col">
+															<label class="font-weight-bold text-dark text-2">Last Name</label>
+															<input id="name" type="text" class="form-control form-control-lg" name="last_name" required autocomplete="last_name" autofocus>
+														</div>
+													</div>
+                                                    <input id="is_admin" type="hidden" name="is_admin" value=0>
+													<div class="form-row">
+														<div class="form-group col">
+															<label class="font-weight-bold text-dark text-2">Password</label>
+															<input type="password" class="form-control form-control-lg" name="password" required autocomplete="current-password">
+                                                        </div>
+													</div>
+                                                    <!--<div class="form-row">
+														<div class="form-group col">
+															<label class="font-weight-bold text-dark text-2">Confirm Password</label>
+															<input id="password-confirm" type="password" class="form-control form-control-lg" name="password_confirmation" required autocomplete="new-password">
+                                                        </div>
+													</div>-->
+													<div class="form-row">
+														<div class="form-group col">
+															<input type="submit" value="Register" class="btn btn-primary btn-modern float-right" data-loading-text="Loading...">
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3"></div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+            </div>
+        
+			{% include "trafficapp/footer.html" %}
+		</div>
+		{% include "trafficapp/foot.html" %}
+    </body>
+</html>

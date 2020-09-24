@@ -1,0 +1,3 @@
+[0921/113957.750:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0921/113959.210:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0921/114002.935:ERROR:crashpad_client_win.cc(513)] CreateProcess: The paging file is too small for this operation to complete. (0x5AF)

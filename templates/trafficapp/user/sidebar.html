@@ -1,0 +1,66 @@
+{% load static %}
+
+<div class="sidebar" data-color="rose" data-background-color="black" data-image="{% static 'assets/img/sidebar-1.jpg' %}">
+    <!--
+      Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+      Tip 2: you can also add an image using data-image tag
+  -->
+  <div class="logo text-center"><!--<a href="" class="simple-text logo-mini">
+      TGB
+    </a>-->
+    <a href="#" class="simple-text logo-normal">
+      User Portal
+    </a></div>
+  <div class="sidebar-wrapper">
+    <div class="user">
+      <!--<div class="photo">
+        <img src="{% static 'assets/img/faces/avatar.jpg' %}" />
+      </div>-->
+      <div class="user-info text-center">
+        <a data-toggle="collapse" class="username">
+          <span>
+            {{ user.username }}
+            <!--<b class="caret"></b>-->
+          </span>
+        </a>
+        <!--<div class="collapse" id="collapseExample">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+              <i class="material-icons">account_box</i>
+                <span class="sidebar-normal"> My Profile </span>
+              </a>
+            </li>
+          </ul>
+        </div>-->
+      </div>
+    </div>
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/trafficapp/user/dashboard/">
+          <i class="material-icons">dashboard</i>
+          <p> Dashboard </p>
+        </a>
+      </li>
+      <li class="nav-item  ">
+        <a class="nav-link" href="/trafficapp/user/placeorder">
+          <i class="material-icons">list</i>
+          <p> Place Order </p>
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/trafficapp/user/packages">
+          <i class="material-icons">card_membership</i>
+          <p> Packages </p>
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/trafficapp/user/history">
+          <i class="material-icons">description</i>
+          <p> History </p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
